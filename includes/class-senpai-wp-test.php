@@ -146,7 +146,7 @@ class Senpai_Wp_Test {
 		 * The class responsible for defining dashboard Notices
 		 * of the theme.
 		 */
-		require_once THEME_DIR . '/includes/class-senpai-wp-test-notices.php';
+		//require_once THEME_DIR . '/includes/class-senpai-wp-test-notices.php';
 
 		/**
 		 * The class responsible for defining APIs endpoints
@@ -235,7 +235,7 @@ class Senpai_Wp_Test {
 		//$theme_blocks = new Senpai_Wp_Test_Blocks();
 		$theme_customizer = new Senpai_Wp_Test_Customizer();
 
-		$theme_notices = new Senpai_Wp_Test_Notices();
+		//$theme_notices = new Senpai_Wp_Test_Notices();
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $theme_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $theme_admin, 'enqueue_scripts' );
@@ -249,8 +249,8 @@ class Senpai_Wp_Test {
 		$this->loader->add_action( 'customize_register', $theme_customizer, 'load_customizer' );
 
 
-		$this->loader->add_action( 'admin_notices', $theme_notices,'get_all' );
-		$this->loader->add_action( 'wp_ajax_dashboard_notice_senpai', $theme_notices, 'dissmiss' );
+		//$this->loader->add_action( 'admin_notices', $theme_notices,'get_all' );
+		//$this->loader->add_action( 'wp_ajax_dashboard_notice_senpai', $theme_notices, 'dissmiss' );
 
 	}
 
